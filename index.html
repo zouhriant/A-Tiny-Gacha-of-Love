@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For Mayiii 🤍</title>
+
+    <!-- Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Pacifico&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- ================= BACKGROUND ================= -->
+
+<div class="background">
+
+    <div class="gradient"></div>
+
+    <div class="stars"></div>
+
+    <div class="cloud cloud1"></div>
+
+    <div class="cloud cloud2"></div>
+
+    <div class="cloud cloud3"></div>
+
+    <div class="hearts"></div>
+
+</div>
+
+<!-- ================= OPENING ================= -->
+
+<section id="opening">
+
+    <div class="opening-card">
+
+        <div class="hello">
+
+            Hi, Mayiii 🤍
+
+        </div>
+
+        <h1>
+
+            Surprise Capsule
+
+        </h1>
+
+        <p>
+
+            i made a little gacha machine just for you ♡
+
+        </p>
+
+        <button id="startButton">
+
+            ✨ Start Your Surprise ✨
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ================= MAIN ================= -->
+
+<section id="game" class="hidden">
+
+<div class="game-header">
+
+<h2>
+
+🎀 Surprise Gacha 🎀
+
+</h2>
+
+<p class="subtitle">
+
+collect all 9 little messages ♡
+
+</p>
+
+</div>
+
+<!-- Progress -->
+
+<div class="progress">
+
+<div class="progress-text">
+
+Capsule
+
+<span id="progressNumber">
+
+1 / 9
+
+</span>
+
+</div>
+
+<div class="progress-bar">
+
+<div id="progressFill"></div>
+
+</div>
+
+</div>
+
+<!-- MACHINE -->
+
+<div class="machine">
+
+<div class="machine-top">
+
+<div class="glass">
+
+<div class="inside-capsules">
+
+  <div class="mini-capsule">
+    <div class="capsule-top"></div>
+    <div class="capsule-bottom"></div>
+    <div class="capsule-shine"></div>
+  </div>
+
+  <div class="mini-capsule">
+    <div class="capsule-top"></div>
+    <div class="capsule-bottom"></div>
+    <div class="capsule-shine"></div>
+  </div>
+
+  <div class="mini-capsule">
+    <div class="capsule-top"></div>
+    <div class="capsule-bottom"></div>
+    <div class="capsule-shine"></div>
+  </div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="machine-bottom">
+
+<div class="slot"></div>
+
+<div class="wheel"></div>
+
+</div>
+
+<div id="handle">
+
+<div class="stick"></div>
+
+<div class="ball"></div>
+
+</div>
+
+</div>
+
+<!-- ================= CAPSULE ================= -->
+
+<div id="capsuleContainer">
+
+    <div id="capsule">
+
+        <div class="capsule-top"></div>
+
+        <div class="capsule-bottom"></div>
+
+        <div class="capsule-shine"></div>
+
+    </div>
+
+</div>
+
+<!-- ================= LETTER ================= -->
+
+<div id="letterContainer">
+
+<div class="paper">
+
+<h2 id="messageTitle"></h2>
+
+<div id="messageBody"></div>
+
+<button id="nextButton">
+
+Next Capsule 🤍
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<script src="script.js"></script>
+
+<canvas id="confetti"></canvas>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+</body>
+
+</html>

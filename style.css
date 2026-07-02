@@ -1,0 +1,1012 @@
+/* ======================================
+   RESET
+====================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+
+    width:100%;
+    height:100%;
+
+}
+
+body{
+    font-family:"Fredoka",sans-serif;
+    overflow-x:hidden;
+    overflow-y:auto;
+    background:#FFE8F3;
+}
+
+/* ======================================
+   BACKGROUND
+====================================== */
+
+.background{
+
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+
+    z-index:-1;
+
+}
+
+/* Pink Gradient */
+
+.gradient{
+
+    position:absolute;
+    inset:0;
+
+    background:
+
+    linear-gradient(
+
+    180deg,
+
+    #FFD7EC,
+
+    #FFEAF7 45%,
+
+    #FFF8FC
+
+    );
+
+}
+
+/* ======================================
+   OPENING
+====================================== */
+
+#opening{
+
+    width:100%;
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    transition:1s;
+
+}
+
+/* ====================================== */
+
+.opening-card{
+
+    width:420px;
+
+    max-width:92%;
+
+    background:
+
+    rgba(255,255,255,.45);
+
+    backdrop-filter:blur(18px);
+
+    border:
+
+    2px solid rgba(255,255,255,.6);
+
+    border-radius:35px;
+
+    padding:45px;
+
+    text-align:center;
+
+    box-shadow:
+
+    0 25px 60px rgba(255,120,180,.25);
+
+}
+
+/* ====================================== */
+
+.hello{
+
+    font-size:22px;
+
+    color:#ff73b6;
+
+    margin-bottom:10px;
+
+}
+
+h1{
+
+    font-family:"Pacifico",cursive;
+
+    color:#ff5da7;
+
+    font-size:46px;
+
+    margin-bottom:20px;
+
+}
+
+.opening-card p{
+
+    color:#b06a95;
+
+    line-height:1.8;
+
+    margin-bottom:35px;
+
+}
+
+/* ======================================
+BUTTON
+====================================== */
+
+button{
+
+    border:none;
+
+    padding:
+
+    16px 34px;
+
+    border-radius:999px;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    color:white;
+
+    background:
+
+    linear-gradient(
+
+    90deg,
+
+    #ff7bbd,
+
+    #ff5ea7
+
+    );
+
+    transition:.35s;
+
+    box-shadow:
+
+    0 12px 25px rgba(255,110,170,.35);
+
+}
+
+button:hover{
+
+transform:
+
+translateY(-5px)
+
+scale(1.04);
+
+}
+
+button:active{
+
+transform:scale(.95);
+
+}
+
+/* ======================================
+GAME
+====================================== */
+
+#game{
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+min-height:100vh;
+min-height:100vh;
+
+padding:40px 0 80px;
+
+transition:1s;
+
+}
+
+.hidden{
+
+display:none;
+
+}
+
+.subtitle{
+
+margin-top:10px;
+
+color:#b46d98;
+
+font-size:18px;
+
+}
+
+/* ======================================
+CLOUDS
+====================================== */
+
+.cloud{
+
+position:absolute;
+
+background:white;
+
+width:180px;
+
+height:65px;
+
+border-radius:100px;
+
+opacity:.75;
+
+}
+
+.cloud::before{
+
+content:"";
+
+position:absolute;
+
+width:70px;
+height:70px;
+
+background:white;
+
+border-radius:50%;
+
+left:25px;
+top:-30px;
+
+}
+
+.cloud::after{
+
+content:"";
+
+position:absolute;
+
+width:80px;
+height:80px;
+
+background:white;
+
+border-radius:50%;
+
+right:25px;
+top:-40px;
+
+}
+
+.cloud1{
+
+top:80px;
+left:-250px;
+
+animation:cloudMove 35s linear infinite;
+
+}
+
+.cloud2{
+
+top:220px;
+left:-350px;
+
+animation:cloudMove 45s linear infinite;
+
+}
+
+.cloud3{
+
+top:150px;
+left:-600px;
+
+animation:cloudMove 60s linear infinite;
+
+}
+
+@keyframes cloudMove{
+
+from{
+
+transform:translateX(0);
+
+}
+
+to{
+
+transform:translateX(2200px);
+
+}
+
+}
+
+/* ======================================
+FLOATING
+====================================== */
+
+.opening-card{
+
+animation:floatCard 4s ease-in-out infinite;
+
+}
+
+@keyframes floatCard{
+
+50%{
+
+transform:translateY(-8px);
+
+}
+
+}
+
+h1{
+
+animation:titleFloat 3s ease-in-out infinite;
+
+}
+
+@keyframes titleFloat{
+
+50%{
+
+transform:translateY(-5px);
+
+}
+
+}
+
+/* ======================================
+RESPONSIVE
+====================================== */
+
+@media(max-width:768px){
+
+h1{
+
+font-size:34px;
+
+}
+
+.opening-card{
+
+padding:35px 25px;
+
+}
+
+button{
+
+font-size:16px;
+
+padding:14px 25px;
+
+}
+
+.subtitle{
+
+font-size:16px;
+
+}
+
+}
+
+/* ================= MACHINE ================= */
+
+.machine{
+
+margin-top:35px;
+
+width:320px;
+
+position:relative;
+
+transition:.5s;
+
+}
+
+.machine-top{
+
+height:250px;
+
+border-radius:35px;
+
+background:linear-gradient(
+
+180deg,
+
+#ffc9e8,
+
+#ffb4dc
+
+);
+
+border:8px solid white;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+box-shadow:
+
+0 20px 40px rgba(255,120,180,.25);
+
+}
+
+.glass{
+
+width:190px;
+
+height:190px;
+
+border-radius:50%;
+
+background:
+
+rgba(255,255,255,.45);
+
+backdrop-filter:blur(8px);
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:32px;
+
+border:7px solid white;
+
+overflow:hidden;
+
+}
+
+.machine-bottom{
+
+height:150px;
+
+background:
+
+linear-gradient(
+
+180deg,
+
+#ff84bf,
+
+#ff5fa7
+
+);
+
+border-radius:
+
+0 0 30px 30px;
+
+border:
+
+8px solid white;
+
+border-top:none;
+
+position:relative;
+
+}
+
+.slot{
+
+width:80px;
+
+height:10px;
+
+background:#7b5570;
+
+border-radius:99px;
+
+position:absolute;
+
+left:50%;
+
+top:30px;
+
+transform:translateX(-50%);
+
+}
+
+.wheel{
+
+width:65px;
+
+height:65px;
+
+background:white;
+
+border-radius:50%;
+
+position:absolute;
+
+left:50%;
+
+top:60px;
+
+transform:translateX(-50%);
+
+}
+
+#handle{
+
+position:absolute;
+
+right:-45px;
+
+top:210px;
+
+width:80px;
+
+height:80px;
+
+cursor:pointer;
+
+transition:.8s;
+
+transform-origin:left center;
+
+}
+
+#handle.spin{
+
+transform:rotate(120deg);
+
+}
+
+.stick{
+
+width:55px;
+
+height:10px;
+
+background:#ff79b8;
+
+position:absolute;
+
+left:10px;
+
+top:35px;
+
+border-radius:99px;
+
+}
+
+.ball{
+
+width:30px;
+
+height:30px;
+
+border-radius:50%;
+
+background:white;
+
+position:absolute;
+
+right:0;
+
+top:24px;
+
+}
+
+/* ================= PROGRESS ================= */
+
+.progress{
+
+width:320px;
+
+margin-top:25px;
+
+}
+
+.progress-text{
+
+display:flex;
+
+justify-content:space-between;
+
+margin-bottom:10px;
+
+color:#d05c98;
+
+font-weight:bold;
+
+}
+
+.progress-bar{
+
+height:14px;
+
+background:white;
+
+border-radius:99px;
+
+overflow:hidden;
+
+}
+
+#progressFill{
+
+height:100%;
+
+width:11%;
+
+background:linear-gradient(90deg,#ff79b8,#ffb6d9);
+
+transition:.5s;
+
+}
+
+/* =====================================
+CAPSULE
+===================================== */
+
+#capsuleContainer{
+    height:220px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    transition:.4s;
+}
+
+#capsule{
+
+width:110px;
+height:110px;
+
+position:relative;
+
+display:none;
+
+cursor:pointer;
+
+transition:.4s;
+
+}
+
+#capsule:hover{
+
+transform:scale(1.08);
+
+}
+
+.capsule-top{
+
+width:110px;
+
+height:55px;
+
+background:
+
+linear-gradient(
+
+180deg,
+
+rgba(255,255,255,.95),
+
+rgba(255,255,255,.5)
+
+);
+
+border-radius:
+
+60px 60px 0 0;
+
+border:3px solid white;
+
+}
+
+.capsule-bottom{
+
+width:110px;
+
+height:55px;
+
+background:
+
+linear-gradient(
+
+180deg,
+
+#ff93c9,
+
+#ff67ad
+
+);
+
+border-radius:
+
+0 0 60px 60px;
+
+border:3px solid white;
+
+}
+
+.capsule-shine{
+
+position:absolute;
+
+left:18px;
+
+top:18px;
+
+width:18px;
+
+height:55px;
+
+border-radius:20px;
+
+background:
+
+rgba(255,255,255,.45);
+
+transform:rotate(-20deg);
+
+}
+
+/* ======================== */
+
+#letterContainer{
+
+display:none;
+
+width:100%;
+
+margin-top:20px;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+.paper{
+
+width:650px;
+
+max-width:92%;
+
+margin:0 auto;
+
+background:white;
+
+padding:35px;
+
+border-radius:28px;
+
+box-shadow:
+
+0 20px 45px rgba(0,0,0,.12);
+
+animation:paper .6s;
+
+position:relative;
+left:4px;
+
+}
+
+@keyframes paper{
+
+from{
+
+opacity:0;
+
+transform:
+
+translateY(60px)
+
+scale(.8);
+
+}
+
+to{
+
+opacity:1;
+
+transform:
+
+translateY(0)
+
+scale(1);
+
+}
+
+}
+
+#messageTitle{
+
+color:#ff5da8;
+
+margin-bottom:20px;
+
+}
+
+#messageBody{
+
+line-height:1.9;
+
+white-space:pre-line;
+
+color:#666;
+
+}
+
+
+/* ===== FLOATING INSIDE CAPSULE ===== */
+
+.inside-capsules{
+  position:relative;
+  width:180px;
+  height:180px;
+}
+
+/* capsule wrapper */
+.mini-capsule{
+  width:60px;
+  height:60px;
+  position:absolute;
+  transform:scale(0.55);
+  animation:float 2.8s ease-in-out infinite;
+}
+
+/* posisi tetap (tidak rotate lagi) */
+.mini-capsule:nth-child(1){
+  top:15px;
+  left:50px;
+}
+
+.mini-capsule:nth-child(2){
+  top:85px;
+  left:10px;
+}
+
+.mini-capsule:nth-child(3){
+  top:90px;
+  left:80px;
+}
+
+/* delay biar gak barengan */
+.mini-capsule:nth-child(2){
+  animation-delay:.3s;
+}
+
+.mini-capsule:nth-child(3){
+  animation-delay:.6s;
+}
+
+/* FLOAT ANIMATION */
+@keyframes float{
+  0%,100%{
+    transform:translateY(0) scale(0.55);
+  }
+  50%{
+    transform:translateY(-8px) scale(0.55);
+  }
+}
+
+/* capsule style (tetap sama reward) */
+.mini-capsule .capsule-top{
+  width:110px;
+  height:55px;
+  background:#fff;
+  border-radius:60px 60px 0 0;
+  border:3px solid white;
+}
+
+.mini-capsule .capsule-bottom{
+  width:110px;
+  height:55px;
+  background:#ff93c9;
+  border-radius:0 0 60px 60px;
+  border:3px solid white;
+}
+
+.mini-capsule .capsule-shine{
+  position:absolute;
+  left:18px;
+  top:18px;
+  width:18px;
+  height:55px;
+  border-radius:20px;
+  background:rgba(255,255,255,.45);
+  transform:rotate(-20deg);
+}
+
+/* ================= RESET MODE ================= */
+
+#resetButton{
+
+margin-top:25px;
+
+}
+
+#nextButton{
+
+margin-top:25px;
+
+min-width:230px;
+
+}
+
+.paper{
+
+text-align:center;
+
+}
+
+#messageBody{
+
+margin-top:15px;
+
+margin-bottom:25px;
+
+}
+
+#confetti{
+position:fixed;
+inset:0;
+pointer-events:none;
+z-index:9999;
+}
+
+@media (max-width:768px){
+
+    #game{
+        justify-content:flex-start;
+        padding:20px 0 40px;
+    }
+
+    .machine{
+        transform:scale(.82);
+        margin-top:10px;
+    }
+
+    .progress{
+        width:270px;
+    }
+
+#capsuleContainer{
+    height:220px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+    .paper{
+        width:92%;
+        padding:24px;
+    }
+
+    h2{
+        font-size:28px;
+    }
+
+    .subtitle{
+        font-size:15px;
+    }
+
+}
