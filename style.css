@@ -225,9 +225,7 @@ transition:1s;
 }
 
 .hidden{
-
-display:none;
-
+    display:none !important;
 }
 
 .subtitle{
