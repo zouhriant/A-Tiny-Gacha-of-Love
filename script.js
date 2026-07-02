@@ -194,24 +194,7 @@ function nextFunction(){
     // CAPSULE TERAKHIR
     if(current===messages.length-1){
 
-        // fade out music
-const fade = setInterval(() => {
-
-    if (bgm.volume > 0.02) {
-
-        bgm.volume -= 0.02;
-
-    } else {
-
-        clearInterval(fade);
-        bgm.pause();
-
-        // buka Drive setelah musik habis
-        window.location.href = DRIVE_LINK; 
-
-    }
-
-}, 100);
+    window.location.href = DRIVE_LINK;
 
         // ubah isi surat
         title.innerHTML="🎉 Congratulations!";
